@@ -1,0 +1,18 @@
+CREATE OR REPLACE Procedure UpdateCustomers
+(idCustomers IN NUMBER , Type IN VARCHAR2) 
+IS
+cnumber number;
+cursor c1 is 
+SELECT id 
+FROM INFOABOUTCUSTOMER 
+WHERE ID = idCustomers;
+BEGIN
+DBMS_OUTPUT.eneble;
+open c1;
+fetch c1 into cnumber;
+if c1%notfound then 
+put_line("hi",2);
+end if;
+UPDATE INFOABOUTCUSTOMER 
+        SET 
+END;
